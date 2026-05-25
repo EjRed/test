@@ -21,7 +21,8 @@ pipeline {
                 // Gradle: sh './gradlew build'
                 bat 'npm install' 
                 bat 'npm run build'
-                bat 'echo Build step — npm install && npm run build'
+                bat 'echo Build step — npm install'
+                bat 'echo Build step — npm run build'
             }
         }
 
