@@ -19,7 +19,8 @@ pipeline {
                 echo 'Building the project...'
                 // Maven:  sh 'mvn clean package -DskipTests'
                 // Gradle: sh './gradlew build'
-                 npm:    bat 'npm install && npm run build'
+                bat 'npm install' 
+                bat 'npm run build'
                 bat 'echo Build step — npm install && npm run build'
             }
         }
@@ -28,7 +29,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 // Maven:  sh 'mvn test'
-                 npm:    bat 'npm test'
+                bat 'npm test'
                 bat 'echo Test step — npm test'
             }
             post {
