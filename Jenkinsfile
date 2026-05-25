@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 // Maven:  sh 'mvn test'
-                bat npm test -- --watchAll=false --passWithNoTests
+                bat 'npm test --watchAll=false --passWithNoTest'
                 bat 'echo Test step — npm test'
             }
             post {
